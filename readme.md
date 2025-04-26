@@ -12,7 +12,7 @@ How to Run as flask app
  python3 ./paint_by_nums.py 
 OR if using flask runner 
 export FLASK_APP=your_script.py
-flask run --host=0.0.0.0 --port=5000 --cert=cert.pem --key=key.pem
+flask run --host=0.0.0.0 --port=5000 --cert=certs/cert.pem --key=certskey.pem
 
 
 
@@ -35,4 +35,4 @@ Use lets encrypt will have to change ssl_context to ssl_context=('/etc/letsencry
 
 TODO: use a revers nginx proxy or something to handle certs?
 TODO: add sessions??
-TODO: front end tbd
+TODO: front end tbd - using angular
