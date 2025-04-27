@@ -6,7 +6,7 @@ import zipfile
 import tempfile
 import json
 from PIL import Image, ImageFilter, ImageOps
-from typing import Union, NoReturn, Optional, Tuple,
+from typing import Union, NoReturn, Optional, Tuple
 from numpy.typing import NDArray
 from scipy.ndimage import label
 from flask import Flask, request, jsonify, send_file, send_from_directory, after_this_request, Response
@@ -291,8 +291,9 @@ def hello_world() -> str:
 
 if __name__ == '__main__':
     print("PBN App starting at " + str(datetime.now()) ) 
-    # app.run(host='0.0.0.0', port=5000, ssl_context=('./certs/cert.pem', './certs/key.pem'), debug=True)  # Enable HTTPS
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # app.run(host='0.0.0.0', port=5443, ssl_context=('/etc/ssl/certs/cert.pem', '/etc/ssl/certs/key.pem'), debug=True)  # Enable HTTPS
+    app.run(host='0.0.0.0', port=5443, ssl_context=('./certs/cert.pem', './certs/key.pem'), debug=True)  # Enable HTTPS
+    # app.run(host='0.0.0.0', port=5443, debug=True)
     print("PBN App ending at " + str(datetime.now()) ) 
     #for testing run the start() function
     #  start()
