@@ -11,7 +11,7 @@ Requirements
 How to Run as flask app
  python3 ./paint_by_nums.py 
 OR if using flask runner 
-export FLASK_APP=your_script.py
+export FLASK_APP=paint_by_nums.py
 flask run --host=0.0.0.0 --port=5000 --cert=certs/cert.pem --key=certskey.pem
 
 
@@ -36,3 +36,7 @@ Use lets encrypt will have to change ssl_context to ssl_context=('/etc/letsencry
 TODO: use a revers nginx proxy or something to handle certs?
 TODO: add sessions??
 TODO: front end tbd - using angular
+
+Generate Requirements with pip3 freeze > requirements.txt'
+
+to build container docker build -f dockerfile -t SR_pbn_backend:latest .
